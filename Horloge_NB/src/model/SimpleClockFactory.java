@@ -1,17 +1,17 @@
-package Model;
+package model;
 
 import java.time.format.DateTimeFormatter;
 
 public class SimpleClockFactory extends ClockFactory {
 	
-	SimpleClockFactory(){
+	public SimpleClockFactory(){
 		
 	}
 	
 	@Override
 	public Clock fabriqueClock() {
-		formatter = DateTimeFormatter.ofPattern("HH:mm");
-		Clock temp = new SimpleClockConcret(formatter);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+		Clock temp = new SimpleClockConcret(formatter,60);
 		return temp;
 	}
 

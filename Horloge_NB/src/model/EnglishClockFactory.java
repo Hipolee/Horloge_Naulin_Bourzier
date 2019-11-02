@@ -1,16 +1,16 @@
-package Model;
+package model;
 
 import java.time.format.DateTimeFormatter;
 
 public class EnglishClockFactory extends ClockFactory {
 	
-	EnglishClockFactory(){
+	public EnglishClockFactory(){
 		
 	}
 	
 	@Override
 	public Clock fabriqueClock() {
-		formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss");
 		Clock temp = new EnglishClockConcret(formatter);
 		return temp;
 	}

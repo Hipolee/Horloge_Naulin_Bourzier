@@ -1,15 +1,15 @@
-package Model;
+package model;
 import java.time.LocalTime;
 
 public abstract class Clock {
-	protected LocalTime temps;
-	protected int refreshFrequency;
+	private LocalTime temps;
+	private int refreshFrequency;
 	
-	LocalTime getTemps() {
+	public LocalTime getTemps() {
 		return temps;
 	}
 	
-	void setTemps(LocalTime temps) {
+	public void setTemps(LocalTime temps) {
 		this.temps = temps;
 	}
 
