@@ -22,7 +22,7 @@
                <children>
                   <AnchorPane prefHeight="25.0" prefWidth="401.0">
                      <children>
-                        <Label layoutY="26.0" prefHeight="21.0" prefWidth="151.0" text="Label" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="26.0" />
+                        <Label layoutY="26.0" prefHeight="21.0" prefWidth="151.0" text="Refresh (sec)" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="26.0" />
                         <TextField fx:id="refreshField" layoutX="214.0" layoutY="21.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0" />
                      </children>
                   </AnchorPane>

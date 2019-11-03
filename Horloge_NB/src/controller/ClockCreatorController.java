@@ -19,17 +19,25 @@ public class ClockCreatorController {
 	@FXML
 	Button CreaHorloge;
 	
+	/**
+	 * Initialize the parameter's fields
+	 */
 	@FXML
 	private void initialize() {
 		formatField.setText("HH:mm");
 		refreshField.setText("60");
 	}
 	
+	/**
+	 * Create a new clock displaying window
+	 */
 	@FXML
 	private void createHorloge() {
-		
 		try {
-			AnchorPane root1 = FXMLLoader.load(getClass().getResource("/ressources/horloge.fxml"));
+			ClockController control = new ClockController(formatField.getText(), refreshField.getText());
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/ressources/horloge.fxml"));
+			loader.setController(control);
+			AnchorPane root1 = loader.load();
 			Scene scene1 = new Scene(root1,600,400);
 			scene1.getStylesheets().add(getClass().getResource("/ressources/application.css").toExternalForm());
 			Stage newClock = new Stage();

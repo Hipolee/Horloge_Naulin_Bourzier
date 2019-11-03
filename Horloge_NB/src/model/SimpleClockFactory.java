@@ -4,14 +4,34 @@ import java.time.format.DateTimeFormatter;
 
 public class SimpleClockFactory extends ClockFactory {
 	
-	public SimpleClockFactory(){
-		
+	private String heure;
+	private String refreshFreq;
+	
+	public SimpleClockFactory(String heure, String refreshFreq){
+		this.setHeure(heure);
+		this.setRefreshFreq(refreshFreq);
+	}
+
+	public String getHeure() {
+		return heure;
+	}
+
+	public void setHeure(String heure) {
+		this.heure = heure;
+	}
+
+	public String getRefreshFreq() {
+		return refreshFreq;
+	}
+
+	public void setRefreshFreq(String refreshFreq) {
+		this.refreshFreq = refreshFreq;
 	}
 	
 	@Override
 	public Clock fabriqueClock() {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
-		Clock temp = new SimpleClockConcret(formatter,60);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(this.getHeure());
+		Clock temp = new SimpleClockConcret(formatter,Integer.parseInt(this.getRefreshFreq()));
 		return temp;
 	}
 
